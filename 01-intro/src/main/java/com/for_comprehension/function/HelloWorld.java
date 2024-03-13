@@ -7,6 +7,6 @@ class HelloWorld {
     public static void main(String[] args) {
 
         Map.of("foo", "bar")
-          .forEach((k, _) -> System.out.println(k));
+          .forEach((k, v) -> System.out.println(k));
     }
 }
