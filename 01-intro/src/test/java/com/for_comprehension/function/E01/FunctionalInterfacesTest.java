@@ -5,6 +5,7 @@ import com.pholser.junit.quickcheck.generator.InRange;
 import com.pholser.junit.quickcheck.runner.JUnitQuickcheck;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.assertj.core.api.Assertions;
+import org.junit.Ignore;
 import org.junit.runner.RunWith;
 
 import java.net.URI;
@@ -20,8 +21,14 @@ import static org.assertj.core.api.Assertions.assertThat;
 @RunWith(JUnitQuickcheck.class)
 public class FunctionalInterfacesTest {
 
+    @Ignore
     @Property
-    public void l1_toConstant() {
+    public void l0_uppercased_and_lowercased_should_be_the_same(String arg) {
+        Assertions.assertThat(arg.toLowerCase()).isEqualTo(arg.toLowerCase().toUpperCase().toLowerCase());
+    }
+
+    @Property
+    public void l1_toCłonstant() {
         assertThat(FunctionalInterfaces.L1_toConstant().get()).isEqualTo(42);
     }
 
@@ -60,7 +67,6 @@ public class FunctionalInterfacesTest {
 
         assertThat(function.apply(input).test(input)).isEqualTo(false);
         assertThat(function.apply(input).test(input + 1)).isEqualTo(true);
-
     }
 
     @Property
