@@ -11,7 +11,7 @@ Clone this repository and make sure that you get `build success` after running `
 
 ### PL
 
-Żeby przygotować się do szkolenia potrzebne nam będą:
+Żeby przygotować się do szkolenia potArzebne nam będą:
 - Java 21
 - Maven
 - git
