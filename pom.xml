@@ -26,7 +26,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <junit.version>5.10.2</junit.version>
-        <assertj.version>3.24.2</assertj.version>
+        <assertj.version>3.25.3</assertj.version>
         <awaitility.version>4.2.0</awaitility.version>
         <quickcheck.version>0.9</quickcheck.version>
         <jmh.version>1.23</jmh.version>
