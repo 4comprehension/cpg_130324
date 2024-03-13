@@ -1,5 +1,6 @@
 package com.for_comprehension.function;
 
+import java.util.Objects;
 import java.util.Random;
 import java.util.concurrent.Callable;
 import java.util.function.BiFunction;
@@ -58,7 +59,19 @@ class L1_Function {
 
         BinaryOperator<Integer> f9 = (i1, i2) -> Math.min(i1, i2);
 
-        TriFunction<Integer, Integer, Integer, Integer> tf = (i1,i2,i3) -> i1 + i2 + i3;
+        TriFunction<Integer, Integer, Integer, Integer> tf = (i1, i2, i3) -> i1 + i2 + i3;
+        TriFunction<String, String, Integer, Object> tf2 = (s, s2, integer) -> s + s2 + integer;
+        Integer result = tf.apply(1, 2, 3);
+    }
+
+    @FunctionalInterface
+    public interface TriFunction<T1, T2, T3, R> {
+        R apply(T1 t1, T2 t2, T3 t3);
+
+        default <V> TriFunction<T1, T2, T3, V> andThen(Function<R, V> after) {
+            Objects.requireNonNull(after);
+            return (t1, t2, t3) -> after.apply(apply(t1, t2, t3));
+        }
     }
 
     public static void calculate(Supplier<Integer> value) {
