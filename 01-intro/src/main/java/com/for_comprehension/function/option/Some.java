@@ -3,13 +3,7 @@ package com.for_comprehension.function.option;
 import java.util.Objects;
 import java.util.function.Function;
 
-final class Some<T> implements Option<T> {
-
-    private final T value;
-
-    Some(T value) {
-        this.value = value;
-    }
+public record Some<T>(T value) implements Option<T> {
 
     @Override
     public boolean isPresent() {

@@ -8,7 +8,6 @@ import java.util.concurrent.Callable;
 import java.util.function.Supplier;
 
 class TemplateMethodLambdaTimed {
-
     public static void main(String[] args) {
         var result = timed(() -> calculate());
         System.out.println("result: " + result);

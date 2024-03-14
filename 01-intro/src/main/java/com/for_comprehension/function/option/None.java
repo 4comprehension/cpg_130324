@@ -2,7 +2,7 @@ package com.for_comprehension.function.option;
 
 import java.util.function.Function;
 
-final class None<T> implements Option<T> {
+public record None<T>() implements Option<T> {
 
     static None<?> INSTANCE = new None<>();
 

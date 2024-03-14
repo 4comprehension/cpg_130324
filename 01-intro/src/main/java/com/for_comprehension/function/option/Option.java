@@ -5,6 +5,7 @@ import java.util.function.Function;
 
 
 // to jest taki typ, który mówi "albo coś jest, albo nie ma"
+// ADT - algebraic data type: Option<T> = Some<T> | None
 public sealed interface Option<T> permits Some, None {
 
     boolean isPresent();
