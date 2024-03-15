@@ -21,6 +21,8 @@
 
     <modules>
         <module>01-intro</module>
+        <module>movie-descriptions</module>
+        <module>rental-store</module>
     </modules>
 
     <properties>
